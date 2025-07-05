@@ -1,0 +1,24 @@
+-----------
+PSEUDOCODE:
+-----------
+
+    FUNCTION shuffle(shift_list):
+        n = length(shift_list)
+        FOR (i = 0; i < n-1; i++):
+            j = RANDOM_INTEGER(0, i)
+            SWAP shift_list[i] WITH shift_list[j]
+        RETURN shift_list
+
+
+
+-----------
+JAVASCRIPT:
+-----------
+
+    function shuffle(shift_list) {
+        for (let i = 0; i < shift_list.length - 1; i++) {
+            const j = Math.floor(Math.random() * (i + 1)); 
+            [shift_list[i], shift_list[j]] = [shift_list[j], shift_list[i]]
+        }
+        return shift_list;
+    }   
