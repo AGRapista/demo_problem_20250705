@@ -55,6 +55,6 @@ function cleanSubordinate(node) {
     return { ...node };
 }
 
-const output = topManagers.map(cleanSubordinate);
-
+var output = topManagers.map(cleanSubordinate);
+output = output.reverse()
 console.log(JSON.stringify(output, null, 2));
